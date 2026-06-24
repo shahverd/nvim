@@ -11,6 +11,7 @@ vim.pack.add({
     "https://github.com/neovim/nvim-lspconfig",
     { src = "https://github.com/nvim-treesitter/nvim-treesitter", version = "main" },
     "https://github.com/mks-h/treesitter-autoinstall.nvim",
+    "https://github.com/meanderingprogrammer/render-markdown.nvim"
 })
 
 require("lazydev").setup()
@@ -20,10 +21,10 @@ require("nvim-treesitter").setup()
 require("treesitter-autoinstall").setup()
 require("which-key").setup()
 require("catppuccin").setup()
-vim.cmd.colorscheme("catppuccin")
+require("render-markdown").setup()
 
 require("mason-lspconfig").setup({
-    ensure_installed = { "clangd", "lua_ls", "ts_ls"},
+    ensure_installed = {"lua_ls", "ts_ls"},
 })
 
 vim.lsp.config("*", {

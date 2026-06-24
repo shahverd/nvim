@@ -1,3 +1,5 @@
+require("plugins")
+
 vim.g.mapleader = " "
 vim.opt.number = true
 vim.opt.relativenumber = true
@@ -11,8 +13,7 @@ vim.opt.shiftwidth = 2
 vim.opt.expandtab = true
 vim.opt.arabicshape = false -- based on gnome terminal
 vim.opt.completeopt = { "menu", "menuone", "noselect" }
-
-require("plugins")
+vim.cmd.colorscheme("catppuccin")
 
 -- ============================================================================
 -- Keymaps
